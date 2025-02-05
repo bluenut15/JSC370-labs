@@ -93,6 +93,10 @@ Once you are done setting up the project, you can now start working with the MET
 library(dtplyr)
 library(dplyr)
 library(data.table)
+library(ggplot2)
+library(mgcv)
+library(leaflet)
+library(kableExtra)
 ```
 
 2. Load the met data from https://raw.githubusercontent.com/JSC370/JSC370-2024/main/data/met_all_2023.gz, and also the station data. For the latter, you can use the code we used during lecture to pre-process the stations data:
@@ -224,12 +228,12 @@ mid_station <- mid[, .SD[which.min(mid_eudist)], by = STATE]
 ```{r}
 # Visualize
 leaflet() %>% 
-  addProviderTiles('CartoDB.Positron') %>%
+  addProviderTiles('CartoDB.Positron') |>
   addCircles(
     data = mid_station, 
     lat = ~lat, lng = ~lon, popup = "geographic mid station", 
     opacity = 1, fillOpacity = 1, radius = 400, color = "blue"
-  ) %>%
+  ) |>
   addCircles(
     data = id_station, 
     lat = ~lat, lng = ~lon, popup = "eudist mid station", 
