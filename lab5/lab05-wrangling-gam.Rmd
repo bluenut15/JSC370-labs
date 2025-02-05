@@ -276,7 +276,29 @@ summary_table <- met |>
   summarize(temp_mean = mean(temp, na.rm = TRUE)) |>
   pivot_wider(names_from = elev_cat, values_from = temp_mean)
 
-kable(summary_table, booktabs = TRUE) %>%
+kable(summary_table, booktabs = TRUE, caption = "Mean Temperature by State and Elevation Category") %>%
+  kable_styling(font_size = 10) %>%
+  kable_paper("hover", full_width = FALSE)
+```
+
+```{r}
+wind_speed_table <- met |>
+  group_by(STATE, elev_cat) |>
+  summarize(wind_speed_mean = mean(wind.sp, na.rm = TRUE)) |>
+  pivot_wider(names_from = elev_cat, values_from = wind_speed_mean)
+
+kable(wind_speed_table, booktabs = TRUE, caption = "Mean Wind Speed by State and Elevation Category") %>%
+  kable_styling(font_size = 10) %>%
+  kable_paper("hover", full_width = FALSE)
+```
+
+```{r}
+atm_pressure_table <- met |>
+  group_by(STATE, elev_cat) |>
+  summarize(atm_pressure_mean = mean(atm.press, na.rm = TRUE)) |>
+  pivot_wider(names_from = elev_cat, values_from = atm_pressure_mean)
+
+kable(atm_pressure_table, booktabs = TRUE, caption = "Mean Atmospheric Pressure by State and Elevation Category") %>%
   kable_styling(font_size = 10) %>%
   kable_paper("hover", full_width = FALSE)
 ```
