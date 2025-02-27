@@ -23,6 +23,8 @@ For this lab we will be working with the medical record transcriptions from http
 
 2. Render the Rmarkdown document using `github_document` and add it to your github site. Add link to github site in your html.
 
+Link to github repo: https://github.com/bluenut15/JSC370-labs.git
+
 
 ### Setup packages
 

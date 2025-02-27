@@ -2634,6 +2634,7 @@ Quercus.</p></li>
 and add it to your github site. Add link to github site in your
 html.</p></li>
 </ol>
+<p>Link to github repo: <a href="https://github.com/bluenut15/JSC370-labs.git" class="uri">https://github.com/bluenut15/JSC370-labs.git</a></p>
 <div id="setup-packages" class="section level3">
 <h3>Setup packages</h3>
 <p>You should load in <code>tidyverse</code>, (or
@@ -2759,8 +2760,8 @@ tokens</code></pre>
 <pre class="r"><code>tokens |&gt; 
   count(word, sort = TRUE) |&gt; 
   wordcloud2(size = 0.5, color = &quot;random-light&quot;, backgroundColor = &quot;black&quot;)</code></pre>
-<div class="wordcloud2 html-widget html-fill-item" id="htmlwidget-a0e58e84b4b54948feca" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-a0e58e84b4b54948feca">{"x":{"word":["a","and","at","for","he","in","is","no","of","on","patient","right","she","the","then","this","to","was","were","with"],"freq":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-light","minSize":0,"weightFactor":90,"backgroundColor":"black","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<div class="wordcloud2 html-widget html-fill-item" id="htmlwidget-dd9a259f1ee3fecda98c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-dd9a259f1ee3fecda98c">{"x":{"word":["a","and","at","for","he","in","is","no","of","on","patient","right","she","the","then","this","to","was","were","with"],"freq":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-light","minSize":0,"weightFactor":90,"backgroundColor":"black","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 <p>The top 20 words are mostly stopwords (e.g. the, was, of, etc.). This
 makes sense, since these words are essential for English grammar.</p>
 <hr />
@@ -2818,8 +2819,8 @@ tokens &lt;- mt_samples |&gt;
 <pre class="r"><code>tokens |&gt; 
   count(word, sort = TRUE) |&gt; 
   wordcloud2(size = 0.4, color = &quot;random-light&quot;, backgroundColor = &quot;black&quot;)</code></pre>
-<div class="wordcloud2 html-widget html-fill-item" id="htmlwidget-63c94c9681a778476eb0" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-63c94c9681a778476eb0">{"x":{"word":["anesthesia","anterior","blood","closed","diagnosis","fashion","history","incision","left","normal","pain","patient","performed","position","postoperative","procedure","removed","skin","time","vicryl"],"freq":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-light","minSize":0,"weightFactor":72,"backgroundColor":"black","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<div class="wordcloud2 html-widget html-fill-item" id="htmlwidget-1fd81c94ccb47e51011c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1fd81c94ccb47e51011c">{"x":{"word":["anesthesia","anterior","blood","closed","diagnosis","fashion","history","incision","left","normal","pain","patient","performed","position","postoperative","procedure","removed","skin","time","vicryl"],"freq":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-light","minSize":0,"weightFactor":72,"backgroundColor":"black","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 <p>After removing stopwords and numbers, the top 20 words appear to be
 mostly revolving around patients, their medical transcription and health
 status (e.g. the top 5 words are “patient”, “left,”procedure”,
